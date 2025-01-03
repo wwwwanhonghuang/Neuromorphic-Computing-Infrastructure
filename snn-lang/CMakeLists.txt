@@ -13,6 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 # Define directories
 set(SRC_DIR ${CMAKE_BINARY_DIR}/src)
 set(LIB_DIR ${CMAKE_BINARY_DIR}/lib)
+set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
 set(INCLUDE_DIR ${CMAKE_BINARY_DIR}/include)
 
 add_subdirectory(ir)

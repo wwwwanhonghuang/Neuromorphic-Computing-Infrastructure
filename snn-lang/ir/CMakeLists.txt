@@ -6,6 +6,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 set(SRC_DIR src)
+set(TEST_DIR test)
 set(INCLUDE_DIR include)
 set(BUILD_DIR ${CMAKE_BINARY_DIR})
 
@@ -26,7 +27,11 @@ set_target_properties(mir PROPERTIES
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 endif()
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
+
+add_executable(test_build_possion_lif_mir ${TEST_DIR}/test_build_possion_lif_mir.cpp)
+target_link_libraries(test_build_possion_lif_mir mir)
 
 
 add_compile_options(-Werror -Wextra -Wpedantic -O0)

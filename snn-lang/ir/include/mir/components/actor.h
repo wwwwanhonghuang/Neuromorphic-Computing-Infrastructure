@@ -14,7 +14,7 @@ namespace mir
         std::vector<std::string> topology;
         std::vector<std::shared_ptr<MIRExpression>> message_processing_codes;
     };
-} // namespace mir
+} 
 
 
 #endif
